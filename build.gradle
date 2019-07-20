@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = 'com.worldline.pankaj.PerfectNumberApplication'
+
+ext {
+    slf4jVersion = '1.7.25'
+    jettyVersion = '9.4.6.v20170531'
+    jerseyVersion = '2.27'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-simple:${slf4jVersion}"
+
+    compile "org.eclipse.jetty:jetty-server:${jettyVersion}"
+    compile "org.eclipse.jetty:jetty-servlet:${jettyVersion}"
+
+    compile "org.glassfish.jersey.core:jersey-server:${jerseyVersion}"
+    compile "org.glassfish.jersey.containers:jersey-container-servlet-core:${jerseyVersion}"
+    compile "org.glassfish.jersey.containers:jersey-container-jetty-http:${jerseyVersion}"
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:${jerseyVersion}"
+    compile "org.glassfish.jersey.inject:jersey-hk2:${jerseyVersion}"
+
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.1'
+    compile group: 'commons-httpclient', name: 'commons-httpclient', version: '3.1'
+    compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.1.3'
+
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+}

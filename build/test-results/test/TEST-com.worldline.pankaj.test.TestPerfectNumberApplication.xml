@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.worldline.pankaj.test.TestPerfectNumberApplication" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-07-20T15:12:57" hostname="ishanvi-PC" time="1.029">
+  <properties/>
+  <testcase name="testIsPerfectNumber()" classname="com.worldline.pankaj.test.TestPerfectNumberApplication" time="0.929"/>
+  <testcase name="testFindPerfectNumbers_negativeScenarios()" classname="com.worldline.pankaj.test.TestPerfectNumberApplication" time="0.021"/>
+  <testcase name="testFindPerfectNumbers()" classname="com.worldline.pankaj.test.TestPerfectNumberApplication" time="0.057"/>
+  <testcase name="testIsPerfectNumber_negativeScenarios()" classname="com.worldline.pankaj.test.TestPerfectNumberApplication" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
